@@ -12,8 +12,11 @@ const MainCarosel = () => {
     
     return (
         <AliceCarousel
-
             items={items}
+            disableButtonsControls  //tắt điều khiển nút điều hướng
+            autoPlay                //tự động chuyển màn trong 1s
+            autoPlayInterval={1000}
+            infinite                //chuyển đổi vô hạn
     />
     )
 }
