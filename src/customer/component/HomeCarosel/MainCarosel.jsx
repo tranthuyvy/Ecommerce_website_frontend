@@ -15,9 +15,9 @@ const MainCarosel = () => {
             items={items}
             disableButtonsControls  //tắt điều khiển nút điều hướng
             autoPlay                //tự động chuyển màn trong 1s
-            autoPlayInterval={1000}
+            autoPlayInterval={2000}
             infinite                //chuyển đổi vô hạn
-    />
+        />
     )
 }
 
