@@ -3,9 +3,8 @@ import AliceCarousel from 'react-alice-carousel';
 import HomeSectionCard from '../HomeSectionCard/HomeSectionCard';
 import { Button } from '@mui/material';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
-import { self_help } from '../../../Data/self_help';
 
-const HomeSectionCarosel = () => {
+const HomeSectionCarosel = ({data,sectionName}) => {
     const [activeIndex,setACtiveIndex]=useState(0);
 
     const responsive = {
@@ -19,9 +18,10 @@ const HomeSectionCarosel = () => {
 
     const syncActiveIndex=({item})=>setACtiveIndex(item)
 
-    const items = self_help.slice(0,10).map((item)=><HomeSectionCard product={item}/>)
+    const items = data.slice(0,10).map((item)=><HomeSectionCard product={item}/>)
   return (
     <div className='border'>
+        <h2 className='text-2x1 font-extrabold text-gray-800 py-5'>{sectionName}</h2>
         <div className='relative p-5'>
             <AliceCarousel
             items={items}
