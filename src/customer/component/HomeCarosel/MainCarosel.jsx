@@ -7,7 +7,7 @@ import { mainCaroselData } from './MainCaroselData';
 const MainCarosel = () => {
     // const navigate = use
     const items = mainCaroselData.map((item)=> 
-    <img className='cursor-pointer' role='presentation' src={item.image} alt=""/>)
+    <img className='cursor-pointer -z-10' role='presentation' src={item.image} alt=""/>)
 
     
     return (
