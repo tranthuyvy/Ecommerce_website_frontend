@@ -349,7 +349,7 @@ export default function Product() {
               {/* Product grid */}
               <div className="lg:col-span-4 w-full">
                 <div className="flex flex-wrap justify-center bg-white py-5">
-                    {self_help.map((item)=><ProductCard/>)}
+                    {self_help.map((item)=><ProductCard product={item}/>)}
 
                 </div>
               </div>
