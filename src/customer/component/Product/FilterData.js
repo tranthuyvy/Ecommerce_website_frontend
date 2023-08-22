@@ -1,36 +1,33 @@
-export const color = [
-  "white",
-  "black",
-  "red",
-  "marum",
-  "being",
-  "pink",
-  "green",
-  "yellow",
+export const category = [
+  "Kỹ Năng Sống",
+  "Trinh Thám",
+  "IT",
+  "Tâm Lý",
+  "Tâm Linh - Tôn Giáo",
+  "Truyện Tranh",
 ];
 
 export const filters = [
   {
-    id: "color",
-    name: "Color",
+    id: "category",
+    name: "Category",
     options: [
-      { value: "white", label: "white" },
-      { value: "beige", label: "Beige" },
-      { value: "blue", label: "Blue" },
-      { value: "brown", label: "Brown" },
-      { value: "green", label: "Green" },
-      { value: "purple", label: "Purple" },
-      { value: "yellow", label: "Yellow" },
+      { value: "Kỹ Năng Sống", label: "Kỹ Năng Sống" },
+      { value: "Trinh Thám", label: "Trinh Thám" },
+      { value: "IT", label: "IT" },
+      { value: "Tâm Lý", label: "Tâm Lý" },
+      { value: "Tâm Linh - Tôn Giáo", label: "Tâm Linh - Tôn Giáo" },
+      { value: "Truyện Tranh", label: "Truyện Tranh" },
     ],
   },
 
   {
-    id: "size",
-    name: "Size",
+    id: "author",
+    name: "Author",
     options: [
-      { value: "S", label: "S" },
-      { value: "M", label: "M" },
-      { value: "L", label: "L" },
+      { value: "Nguyên Phong", label: "Nguyên Phong" },
+      { value: "Hosie Nguyen", label: "Hosie Nguyen" },
+      { value: "Lê Đỗ Quỳnh Hương", label: "Lê Đỗ Quỳnh Hương" },
     ],
   },
 ];
