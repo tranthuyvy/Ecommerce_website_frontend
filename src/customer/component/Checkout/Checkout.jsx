@@ -5,6 +5,9 @@ import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { useLocation } from "react-router-dom";
+import DeliveryAddressForm from "./DeliveryAddressForm";
+import OrderSummary from "./OrderSummary";
 
 const steps = [
   "Login",
@@ -15,6 +18,10 @@ const steps = [
 
 export default function Checkout() {
   const [activeStep, setActiveStep] = React.useState(0);
+  const location = useLocation();
+  const querySearch= new URLSearchParams(location.search)
+
+  const step = querySearch.get("step");
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -27,7 +34,7 @@ export default function Checkout() {
   return (
     <div className="px-10 lg:px-20">
         <Box sx={{ width: "100%" }}>
-      <Stepper activeStep={activeStep}>
+      <Stepper activeStep={step}>
         {steps.map((label, index) => {
           const stepProps = {};
           const labelProps = {};
@@ -47,7 +54,8 @@ export default function Checkout() {
         </React.Fragment>
       ) : (
         <React.Fragment>
-          <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography>
+          
+
           <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
             <Button
               color="inherit"
@@ -57,12 +65,11 @@ export default function Checkout() {
             >
               Back
             </Button>
-            <Box sx={{ flex: "1 1 auto" }} />
 
-            <Button onClick={handleNext}>
-              {activeStep === steps.length - 1 ? "Finish" : "Next"}
-            </Button>
           </Box>
+          <div>
+            {step == 2 ? <DeliveryAddressForm/>:<OrderSummary/>}
+          </div>
         </React.Fragment>
       )}
     </Box>
