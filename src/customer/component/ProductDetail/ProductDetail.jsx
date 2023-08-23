@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { RadioGroup } from "@headlessui/react";
-import { Button, Rating } from "@mui/material";
+import { Box, Button, Grid, LinearProgress, Rating } from "@mui/material";
+import ProductReviewCard from "./ProductReviewCard";
 
 const product = {
   name: "Basic Tee 6-Pack",
@@ -60,7 +61,7 @@ export default function ProductDetail() {
   const [selectedAuthor, setSelectedAuthor] = useState(product.author[2]);
 
   return (
-    <div className="bg-white">
+    <div className="bg-white lg:px-20">
       <div className="pt-6">
         <nav aria-label="Breadcrumb">
           <ol
@@ -102,6 +103,7 @@ export default function ProductDetail() {
         </nav>
 
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-10 px-4 pt-10">
+
           {/* Image gallery */}
           <div className="flex flex-col items-center">
             <div className="overflow-hidden rounded-lg max-w-[30rem] max-h-[35rem]">
@@ -124,15 +126,15 @@ export default function ProductDetail() {
             </div>
           </div>
           {/* Product info */}
-          <div className="lg:col-span-1 maxt-auto max-w-2x1 px-4 pb-16 sm:px-6 lg:max-w-7x1 lg:px-8 lg:pb-24">
+          <div className="lg:col-span-1 maxt-auto max-w-2xl px-4 pb-16 sm:px-6 lg:max-w-7xl lg:px-8 lg:pb-24">
             <div className="lg:col-span-2 ">
-              <h1 className="text-lg lg:text-x1 font-semibold text-gray-900">
+              <h1 className="text-lg lg:text-xl font-semibold text-gray-900">
                 Muôn Kiếp Nhân Sinh
               </h1>
-              <h1 className="text-lg lg:text-x1 text-gray-900 opacity-60 pt-1">
+              <h1 className="text-lg lg:text-xl text-gray-900 opacity-60 pt-1">
                 Kỹ Năng Sống
               </h1>
-              <h5 className="text-lg lg:text-x1 font-semibold text-gray-900">
+              <h5 className="text-lg lg:text-xl font-semibold text-gray-900">
                 Author Name
               </h5>
             </div>
@@ -141,7 +143,7 @@ export default function ProductDetail() {
             <div className="mt-4 lg:row-span-3 lg:mt-0">
               <h2 className="sr-only">Product information</h2>
 
-              <div className="flex space-x-5 items-center text-lg lg:text-x1 text-gray-900 mt-6">
+              <div className="flex space-x-5 items-center text-lg lg:text-xl text-gray-900 mt-6">
                 <p className="font-semibold">99.000</p>
                 <p className="opacity-50 line-through">109.000</p>
                 <p className="text-green-600 font-semibold">10% Off</p>
@@ -279,6 +281,94 @@ export default function ProductDetail() {
             </div>
           </div>
         </section>
+        
+        {/* rating and reviews */}
+        <section>
+          <h1 className="font-semibold text-lg pb-4">Recent Review & Rating</h1>
+
+          <div className="border p-5">
+            <Grid container spacing={7}>
+
+              <Grid item xs={7}>
+                <div className="space-y-5">
+                  {[1,1,1].map((item)=><ProductReviewCard/>)}
+                </div>
+              </Grid>
+
+              <Grid item xs={5}>
+                <h1 className="text-xl font-semibold pb-2">Product Ratings</h1>
+
+                <div className="flex items-center space-x-3">
+                  <Rating value={4.6} precision={.5} readOnly/>
+                  <p className="opacity-60">441 Ratings</p>
+                </div>
+
+                <Box className="mt-5 space-y-3">
+                  <Grid container alignItems="center" gap={2}>
+                    <Grid item xs={2}>
+                      <p>Excellent</p>
+
+                    </Grid>
+                    <Grid item xs={7}>
+                      <LinearProgress 
+                        sx={{bgcolor:"#d0d0d0", borderRadius:4, height:7}} 
+                        variant="determinate" value={40} color="success" />
+                    </Grid>
+                  </Grid>
+                  <Grid container alignItems="center" gap={2}>
+                    <Grid item xs={2}>
+                      <p>Very Good</p>
+
+                    </Grid>
+                    <Grid item xs={7}>
+                      <LinearProgress 
+                        sx={{bgcolor:"#d0d0d0", borderRadius:4, height:7}} 
+                        variant="determinate" value={30} color="success" />
+                    </Grid>
+                  </Grid>
+                  <Grid container alignItems="center" gap={2}>
+                    <Grid item xs={2}>
+                      <p>Good</p>
+
+                    </Grid>
+                    <Grid item xs={7}>
+                      <LinearProgress 
+                        sx={{bgcolor:"#d0d0d0", borderRadius:4, height:7}} 
+                        variant="determinate" value={25} color="secondary"/>
+                    </Grid>
+                  </Grid>
+                  <Grid container alignItems="center" gap={2}>
+                    <Grid item xs={2}>
+                      <p>Avarage</p>
+
+                    </Grid>
+                    <Grid item xs={7}>
+                      <LinearProgress 
+                        sx={{bgcolor:"#d0d0d0", borderRadius:4, height:7}} 
+                        variant="determinate" value={20} color="warning" />
+                    </Grid>
+                  </Grid>
+                  <Grid container alignItems="center" gap={2}>
+                    <Grid item xs={2}>
+                      <p>Poor</p>
+
+                    </Grid>
+                    <Grid item xs={7}>
+                      <LinearProgress 
+                        sx={{bgcolor:"#d0d0d0", borderRadius:4, height:7}} 
+                        variant="determinate" value={15} color="error" />
+                    </Grid>
+                  </Grid>
+                </Box>
+              </Grid>
+
+            </Grid>
+
+          </div>
+          
+        </section>
+
+        
       </div>
     </div>
   );
