@@ -41,7 +41,7 @@ const OrderDetail = () => {
                     <Box sx={{color:"#DB6507"}}>
 
                         <StarBorderIcon sx={{fontSize:"2rem"}} className='px-2 text-2xl'/>
-                        <span>Rate $ Review Product</span>
+                        <span>Rate & Review Product</span>
 
                     </Box>
 
