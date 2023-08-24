@@ -17,20 +17,20 @@ const product = {
   ],
   images: [
     {
-      src: "https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg",
-      alt: "Two each of gray, white, and black shirts laying flat.",
+      src: "https://salt.tikicdn.com/cache/w1200/ts/product/a1/64/69/c6e76edbe58ee8715d1bac449c9ef2bd.jpg",
+      alt: "image",
     },
     {
-      src: "https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg",
-      alt: "Model wearing plain black basic tee.",
+      src: "https://salt.tikicdn.com/cache/w1200/ts/product/30/ee/5a/e2aed009bb558b5d2cfbbe157b428ba4.jpg",
+      alt: "image",
     },
     {
-      src: "https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg",
-      alt: "Model wearing plain gray basic tee.",
+      src: "https://salt.tikicdn.com/cache/w1200/media/catalog/producttmp/25/4d/52/6e5a9b48c1316dc3ccc55df2c955ec24.jpg",
+      alt: "image",
     },
     {
-      src: "https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg",
-      alt: "Model wearing plain white basic tee.",
+      src: "https://salt.tikicdn.com/cache/w1200/ts/product/6a/da/bb/185d27fe442a1668cf0196c1b82c87eb.jpg",
+      alt: "image",
     },
   ],
   colors: [
