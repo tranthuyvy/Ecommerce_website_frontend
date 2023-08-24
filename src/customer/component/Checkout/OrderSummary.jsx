@@ -44,7 +44,7 @@ const OrderSummary = () => {
               <Button
                 variant="contained"
                 className="w-full mt-5"
-                sx={{ px: "2.5rem", py: ".7rem", bgcolor: "#9155fd" }}
+                sx={{ px: "2.5rem", py: ".7rem", bgcolor: "#DB6507" }}
               >
                 Checkout
               </Button>
