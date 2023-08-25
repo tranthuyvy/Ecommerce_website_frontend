@@ -8,12 +8,12 @@ import HomeSectionCard from "../HomeSectionCard/HomeSectionCard";
 import { useNavigate } from "react-router-dom";
 
 const product = {
-  name: "Basic Tee 6-Pack",
-  price: "$192",
+  name: "Tuổi Trẻ Đáng Giá Bao Nhiêu?",
+  price: "99.000",
   href: "#",
   breadcrumbs: [
-    { id: 1, name: "Men", href: "#" },
-    { id: 2, name: "Clothing", href: "#" },
+    { id: 1, name: "Kỹ Năng Sống", href: "#" },
+    { id: 2, name: "Tư Duy - Kỹ Năng Sống", href: "#" },
   ],
   images: [
     {
@@ -43,15 +43,15 @@ const product = {
     { name: "V", inStock: true },
   ],
   description:
-    'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
+  'Bạn hối tiếc vì không nắm bắt lấy một cơ hội nào đó, chẳng có ai phải mất ngủ. Bạn trải qua những ngày tháng nhạt nhẽo với công việc bạn căm ghét, người ta chẳng hề bận lòng. Bạn có chết mòn nơi xó tường với những ước mơ dang dở, đó không phải là việc của họ. Suy cho cùng, quyết định là ở bạn. Muốn có điều gì hay không là tùy bạn. Nên hãy làm những điều bạn thích. Hãy đi theo tiếng nói trái tim. Hãy sống theo cách bạn cho là mình nên sống. Vì sau tất cả, chẳng ai quan tâm.',
   highlights: [
-    "Hand cut and sewn locally",
-    "Dyed with our proprietary colors",
-    "Pre-washed & pre-shrunk",
-    "Ultra-soft 100% cotton",
+    "Sách Hay",
+    "Kỹ Năng Sống",
+    "Nên Đọc",
+    "Hết",
   ],
   details:
-    'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
+    'Product Detail',
 };
 const reviews = { href: "#", average: 4, totalCount: 117 };
 
@@ -137,13 +137,10 @@ export default function ProductDetail() {
           <div className="lg:col-span-1 maxt-auto max-w-2xl px-4 pb-16 sm:px-6 lg:max-w-7xl lg:px-8 lg:pb-24">
             <div className="lg:col-span-2 ">
               <h1 className="text-lg lg:text-xl font-semibold text-gray-900">
-                Muôn Kiếp Nhân Sinh
+              Tuổi Trẻ Đáng Giá Bao Nhiêu?
               </h1>
-              <h1 className="text-lg lg:text-xl text-gray-900 opacity-60 pt-1">
-                Kỹ Năng Sống
-              </h1>
-              <h5 className="text-lg lg:text-xl font-semibold text-gray-900">
-                Author Name
+              <h5 className="mt-3 opacity-60 text-sm lg:text-sm font-semibold text-gray-900">
+                Author: Rosie Nguyen
               </h5>
             </div>
 
