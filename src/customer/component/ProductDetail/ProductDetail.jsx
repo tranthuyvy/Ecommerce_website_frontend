@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { StarIcon } from "@heroicons/react/20/solid";
 import { RadioGroup } from "@headlessui/react";
 import { Box, Button, Grid, LinearProgress, Rating } from "@mui/material";
 import ProductReviewCard from "./ProductReviewCard";
@@ -8,29 +7,29 @@ import HomeSectionCard from "../HomeSectionCard/HomeSectionCard";
 import { useNavigate } from "react-router-dom";
 
 const product = {
-  name: "Tuổi Trẻ Đáng Giá Bao Nhiêu?",
-  price: "99.000",
+  name: "Basic Tee 6-Pack",
+  price: "$192",
   href: "#",
   breadcrumbs: [
-    { id: 1, name: "Kỹ Năng Sống", href: "#" },
-    { id: 2, name: "Tư Duy - Kỹ Năng Sống", href: "#" },
+    { id: 1, name: "Men", href: "#" },
+    { id: 2, name: "Clothing", href: "#" },
   ],
   images: [
     {
-      src: "https://salt.tikicdn.com/cache/w1200/ts/product/a1/64/69/c6e76edbe58ee8715d1bac449c9ef2bd.jpg",
-      alt: "image",
+      src: "https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg",
+      alt: "Two each of gray, white, and black shirts laying flat.",
     },
     {
-      src: "https://salt.tikicdn.com/cache/w1200/ts/product/30/ee/5a/e2aed009bb558b5d2cfbbe157b428ba4.jpg",
-      alt: "image",
+      src: "https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg",
+      alt: "Model wearing plain black basic tee.",
     },
     {
-      src: "https://salt.tikicdn.com/cache/w1200/media/catalog/producttmp/25/4d/52/6e5a9b48c1316dc3ccc55df2c955ec24.jpg",
-      alt: "image",
+      src: "https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg",
+      alt: "Model wearing plain gray basic tee.",
     },
     {
-      src: "https://salt.tikicdn.com/cache/w1200/ts/product/6a/da/bb/185d27fe442a1668cf0196c1b82c87eb.jpg",
-      alt: "image",
+      src: "https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg",
+      alt: "Model wearing plain white basic tee.",
     },
   ],
   colors: [
@@ -38,20 +37,22 @@ const product = {
     { name: "Gray", class: "bg-gray-200", selectedClass: "ring-gray-400" },
     { name: "Black", class: "bg-gray-900", selectedClass: "ring-gray-900" },
   ],
-  author: [
-    { name: "T", inStock: false },
-    { name: "V", inStock: true },
+  sizes: [
+    { name: "S", inStock: true },
+    { name: "M", inStock: true },
+    { name: "L", inStock: true },
+    { name: "XL", inStock: true },
   ],
   description:
-  'Bạn hối tiếc vì không nắm bắt lấy một cơ hội nào đó, chẳng có ai phải mất ngủ. Bạn trải qua những ngày tháng nhạt nhẽo với công việc bạn căm ghét, người ta chẳng hề bận lòng. Bạn có chết mòn nơi xó tường với những ước mơ dang dở, đó không phải là việc của họ. Suy cho cùng, quyết định là ở bạn. Muốn có điều gì hay không là tùy bạn. Nên hãy làm những điều bạn thích. Hãy đi theo tiếng nói trái tim. Hãy sống theo cách bạn cho là mình nên sống. Vì sau tất cả, chẳng ai quan tâm.',
+    'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
   highlights: [
-    "Sách Hay",
-    "Kỹ Năng Sống",
-    "Nên Đọc",
-    "Hết",
+    "Hand cut and sewn locally",
+    "Dyed with our proprietary colors",
+    "Pre-washed & pre-shrunk",
+    "Ultra-soft 100% cotton",
   ],
   details:
-    'Product Detail',
+    'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
 };
 const reviews = { href: "#", average: 4, totalCount: 117 };
 
@@ -61,7 +62,7 @@ function classNames(...classes) {
 
 export default function ProductDetail() {
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);
-  const [selectedAuthor, setSelectedAuthor] = useState(product.author[2]);
+  const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
   const navigate=useNavigate();
 
   const handleAddToCart=()=>{
@@ -137,10 +138,10 @@ export default function ProductDetail() {
           <div className="lg:col-span-1 maxt-auto max-w-2xl px-4 pb-16 sm:px-6 lg:max-w-7xl lg:px-8 lg:pb-24">
             <div className="lg:col-span-2 ">
               <h1 className="text-lg lg:text-xl font-semibold text-gray-900">
-              Tuổi Trẻ Đáng Giá Bao Nhiêu?
+              Basic Tee Shirt
               </h1>
               <h5 className="mt-3 opacity-60 text-sm lg:text-sm font-semibold text-gray-900">
-                Author: Rosie Nguyen
+                
               </h5>
             </div>
 
@@ -166,30 +167,35 @@ export default function ProductDetail() {
               <form className="mt-10">
                  
 
-                {/* Author */}
-                {/* <div className="mt-10">
+                {/* Sizes */}
+                <div className="mt-10">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-sm font-medium text-gray-900">Author</h3>
-                    
-                  </div> */}
+                    <h3 className="text-sm font-medium text-gray-900">Size</h3>
+                    <a
+                      href="#"
+                      className="text-sm font-medium text-indigo-600 hover:text-indigo-500"
+                    >
+                      Size guide
+                    </a>
+                  </div>
 
-                  {/* <RadioGroup
-                    value={selectedAuthor}
-                    onChange={setSelectedAuthor}
+                  <RadioGroup
+                    value={selectedSize}
+                    onChange={setSelectedSize}
                     className="mt-4"
                   >
                     <RadioGroup.Label className="sr-only">
-                      Choose a author
+                      Choose a size
                     </RadioGroup.Label>
                     <div className="grid grid-cols-4 gap-4 sm:grid-cols-8 lg:grid-cols-4">
-                      {product.author.map((author) => (
+                      {product.sizes.map((size) => (
                         <RadioGroup.Option
-                          key={author.name}
-                          value={author}
-                          disabled={!author.inStock}
+                          key={size.name}
+                          value={size}
+                          disabled={!size.inStock}
                           className={({ active }) =>
                             classNames(
-                                author.inStock
+                              size.inStock
                                 ? "cursor-pointer bg-white text-gray-900 shadow-sm"
                                 : "cursor-not-allowed bg-gray-50 text-gray-200",
                               active ? "ring-2 ring-indigo-500" : "",
@@ -200,9 +206,9 @@ export default function ProductDetail() {
                           {({ active, checked }) => (
                             <>
                               <RadioGroup.Label as="span">
-                                {author.name}
+                                {size.name}
                               </RadioGroup.Label>
-                              {author.inStock ? (
+                              {size.inStock ? (
                                 <span
                                   className={classNames(
                                     active ? "border" : "border-2",
@@ -239,10 +245,10 @@ export default function ProductDetail() {
                         </RadioGroup.Option>
                       ))}
                     </div>
-                  </RadioGroup> */}
-                {/* </div> */}
+                  </RadioGroup>
+                </div>
 
-                <Button onClick={handleAddToCart} variant="contained" sx={{px:"2rem",py:"1rem", bgcolor:"#9155fd"}}>
+                <Button onClick={handleAddToCart} variant="contained" sx={{px:"2rem",py:"1rem", bgcolor:"#9155fd", mt:"1.5rem"}}>
                   Add To Cart
                 </Button>
               </form>

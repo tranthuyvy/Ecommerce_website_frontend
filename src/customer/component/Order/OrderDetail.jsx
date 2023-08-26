@@ -24,12 +24,12 @@ const OrderDetail = () => {
                 <Grid item xs={6}>
                     <div className="flex items-center space-x-4">
                         <img className="w-[5rem] h-[5rem] object-cover object-top"
-                        src="https://salt.tikicdn.com/cache/w1200/ts/product/6a/da/bb/185d27fe442a1668cf0196c1b82c87eb.jpg" 
+                        src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg" 
                         alt="" />
 
                         <div className="space-y-2 ml-5">
-                            <p className="font-semibold">Đắc Nhân Tâm</p>
-                            <p className="space-x-5 opacity-50 text-xs font-semibold">Author: Dale Carnegie</p>
+                            <p className="font-semibold">Basic Tee</p>
+                            <p className="space-x-5 opacity-50 text-xs font-semibold">Size: L</p>
                             <p>97.000</p>
                         </div>
                     </div>

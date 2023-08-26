@@ -13,13 +13,13 @@ const OrderCard = () => {
           <div className="flex cursor-pointer">
             <img
               className="w-[5rem] h-[5rem] object-cover object-top"
-              src="https://salt.tikicdn.com/cache/w1200/ts/product/6a/da/bb/185d27fe442a1668cf0196c1b82c87eb.jpg"
+              src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg"
               alt=""
             />
             <div className="ml-5 space-y-2">
-              <p className="">Đắc Nhân Tâm</p>
+              <p className="">Basic Tea</p>
               <p className="opacity-50 text-xs font-semibold">
-                Author: Dale Carnegie
+                Size: L
               </p>
             </div>
           </div>
